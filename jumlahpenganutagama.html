@@ -60,17 +60,17 @@
             </div>
         </div>
     </nav>
+
     <div class="container mt-4">
         <div class="card">
             <div class="card-header">
-                <h5>Jumlah Penduduk</h5>
+                <h5>Jumlah Penganut Agama</h5>
             </div>
             <div class="card-body">
                 <div id="chart"></div>
             </div>
         </div>
     </div>
-
 
     <!-- Modal -->
     <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
@@ -94,81 +94,48 @@
             </div>
         </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.42.0/apexcharts.min.js"
         integrity="sha512-HctQcT5hnI/elQck4950pvd50RuDnjCSGSoHI8CNyQIYVxsUoyJ+gSQIOrll4oM/Z7Kfi7WCLMIbJbiwYHFCpA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script>
         var options = {
-            series: [{
-                name: 'Jumlah Penduduk',
-                data: [
-                    93156.00, 80644.00, 57101.00, 65142.00, 48858.00, 46850.00, 45396.00, 96748.00, 48705.00, 111027.00, 63749.00, 63411.00, 48353.00, 55554.00, 64775.00, 64182.00, 75272.00, 38703.00, 48310.00, 71075.00, 62161.00
-                ]
-            }],
-            chart: {
-                type: 'bar',
-                height: 350
-            },
-            plotOptions: {
-                bar: {
-                    horizontal: false,
-                    columnWidth: '55%',
-                    endingShape: 'rounded',
-                    dataLabels: {
-                        position: 'top',
-                    },
-                },
-            },
-            colors: ['#800080'],
-            dataLabels: {
-                enabled: false
-            },
-            stroke: {
-                show: true,
-                width: 2,
-                colors: ['transparent']
-            },
-            xaxis: {
-                categories: ['Sukolilo', 'Kayen', 'Tambakromo', 'Winong', 'Pucakwangi',
-                    'Jaken', 'Batangan', 'Juwana', 'Jakenan', 'Pati', 'Gabus', 'Margorejo', 'Gembong',
-                    'Tlogowungu', 'Wedarijaksa', 'Trangkil', 'Margoyoso', 'Gunungwungkal', 'Cluwak', 'Tayu',
-                    'Dukuhseti'],
-                title: {
-                    text: 'Kecamatan'
-                }
-
-            },
-            yaxis: {
-                title: {
-                    text: 'Jiwa'
-
-                }
-            },
-            fill: {
-                opacity: 1
-            },
-            tooltip: {
-                y: {
-                    formatter: function (val) {
-                        return val + " jiwa "
-                    }
-                }
-            },
-            dataLabels: {
-                enabled: true,
-                formatter: function (val) {
-                    return val ;
-                },
-                offsetY: -20,
-                style: {
-                    fontSize: '11px',
-                    colors: ["#304758"]
-                }
-            },
+          series: [{
+          name: 'Penganut Agama',
+          type: 'column',
+          data: [124332, 27430, 3377, 537, 3194]
+        }, {
+          name: 'Persentase Penganut Agama',
+          type: 'area',
+          data: [78.2, 12.8, 4.7, 1.2, 4.2 ]
+        }],
+          chart: {
+          height: 350,
+          type: 'area'
+        },
+        stroke: {
+          width: [0.5, 5],
+        },
+        colors: ['#800080', '#FFC0CB'],
+        dataLabels: {
+          enabled: true,
+          enabledOnSeries: [1],
+        },
+        labels: ['Islam', 'Protestan', 'Katolik', 'Hindu', 'Buddha'],
+        yaxis: [{
+          title: {
+            text: 'Jiwa',
+          },
+        
+        }, {
+          opposite: true,
+          title: {
+            text: 'Persentase (%)'
+          }
+        }]
         };
 
         var chart = new ApexCharts(document.querySelector("#chart"), options);

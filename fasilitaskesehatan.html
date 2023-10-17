@@ -25,33 +25,33 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false"><i class="fa-solid fa-server"></i> Data
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="index.html">Jumlah Penduduk</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false"><i class="fa-solid fa-server"></i> Data
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="index.html">Jumlah Penduduk</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="pendudukjeniskelamin.html">Penduduk Menurut Jenis Kelamin</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="jenissaranaperdagangan.html">Jenis Sarana Perdagangan</a></li>
+                                        <hr class="dropdown-divider">
+                                    <li><a class="dropdown-item" href="fasilitaskesehatan.html">Jumlah Fasilitas Kesehatan</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="jumlahpenganutagama.html">Jumlah Penganut Agama</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                </li>
+                                </ul>
                             </li>
-                            <li><a class="dropdown-item" href="pendudukjeniskelamin.html">Penduduk Menurut Jenis Kelamin</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="jenissaranaperdagangan.html">Jenis Sarana Perdagangan</a></li>
-                                <hr class="dropdown-divider">
-                            <li><a class="dropdown-item" href="fasilitaskesehatan.html">Jumlah Fasilitas Kesehatan</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="jumlahpenganutagama.html">Jumlah Penganut Agama</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                        </li>
-                        </ul>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-disabled="true" data-bs-toggle="modal" data-bs-target="#infoModal"><i
                                 class="fa-solid fa-circle-info"></i> Info</a>
@@ -63,7 +63,7 @@
     <div class="container mt-4">
         <div class="card">
             <div class="card-header">
-                <h5>Jumlah Penduduk</h5>
+                <h5>Jumlah Fasilitas Kesehatan</h5>
             </div>
             <div class="card-body">
                 <div id="chart"></div>
@@ -94,86 +94,98 @@
             </div>
         </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.42.0/apexcharts.min.js"
         integrity="sha512-HctQcT5hnI/elQck4950pvd50RuDnjCSGSoHI8CNyQIYVxsUoyJ+gSQIOrll4oM/Z7Kfi7WCLMIbJbiwYHFCpA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        var options = {
-            series: [{
-                name: 'Jumlah Penduduk',
-                data: [
-                    93156.00, 80644.00, 57101.00, 65142.00, 48858.00, 46850.00, 45396.00, 96748.00, 48705.00, 111027.00, 63749.00, 63411.00, 48353.00, 55554.00, 64775.00, 64182.00, 75272.00, 38703.00, 48310.00, 71075.00, 62161.00
-                ]
-            }],
-            chart: {
-                type: 'bar',
-                height: 350
+
+        <script>
+          var options = {
+              series: [
+              {
+                name: "Rumah Sakit",
+                data: [0,1,0,0,0,0,0,1,0,4,0,1,0,0,0,1,1,0,0,1,0]
+              },
+              {
+                name: "Puskesmas",
+                data: [2,1,1,2,2,1,1,1,1,2,2,1,1,1,2,1,2,1,1,2,1]
+              },
+              {
+                name: "Poliklinik",
+                data: [1,3,2,3,0,1,2,4,2,9,5,1,2,1,2,1,2,0,0,1,1]
+              },
+              {
+                name: "Apotek",
+                data: [5,4,3,3,3,1,4,14,4,12,7,5,1,2,6,4,8,2,3,9,6]
+              }
+            ],
+              chart: {
+              height: 500,
+              type: 'line',
+              dropShadow: {
+                enabled: true,
+                color: '#000',
+                top: 18,
+                left: 7,
+                blur: 10,
+                opacity: 0.2
+              },
+              toolbar: {
+                show: false
+              }
             },
-            plotOptions: {
-                bar: {
-                    horizontal: false,
-                    columnWidth: '55%',
-                    endingShape: 'rounded',
-                    dataLabels: {
-                        position: 'top',
-                    },
-                },
-            },
-            colors: ['#800080'],
+            colors: ['#FFC0CB', '#98FB98', '#ADD8E6', '#D8BFD8'],
             dataLabels: {
-                enabled: false
+              enabled: true,
             },
             stroke: {
-                show: true,
-                width: 2,
-                colors: ['transparent']
+              curve: 'smooth'
+            },
+            title: {
+              text: 'Jumlah Fasilitas Kesehatan Kabupaten Pati 2021',
+              align: 'left'
+            },
+            grid: {
+              borderColor: '#e7e7e7',
+              row: {
+                colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+                opacity: 0.5
+              },
+            },
+            markers: {
+              size: 1
             },
             xaxis: {
-                categories: ['Sukolilo', 'Kayen', 'Tambakromo', 'Winong', 'Pucakwangi',
+              categories: ['Sukolilo', 'Kayen', 'Tambakromo', 'Winong', 'Pucakwangi',
                     'Jaken', 'Batangan', 'Juwana', 'Jakenan', 'Pati', 'Gabus', 'Margorejo', 'Gembong',
                     'Tlogowungu', 'Wedarijaksa', 'Trangkil', 'Margoyoso', 'Gunungwungkal', 'Cluwak', 'Tayu',
                     'Dukuhseti'],
-                title: {
-                    text: 'Kecamatan'
-                }
-
+              title: {
+                text: 'Kecamatan'
+              }
             },
             yaxis: {
-                title: {
-                    text: 'Jiwa'
-
-                }
+              title: {
+                text: 'Jumlah Fasilitas Kesehatan'
+              },
+              min: 0,
+              max: 5
             },
-            fill: {
-                opacity: 1
-            },
-            tooltip: {
-                y: {
-                    formatter: function (val) {
-                        return val + " jiwa "
-                    }
-                }
-            },
-            dataLabels: {
-                enabled: true,
-                formatter: function (val) {
-                    return val ;
-                },
-                offsetY: -20,
-                style: {
-                    fontSize: '11px',
-                    colors: ["#304758"]
-                }
-            },
-        };
-
-        var chart = new ApexCharts(document.querySelector("#chart"), options);
-        chart.render();
-    </script>
+            legend: {
+              position: 'top',
+              horizontalAlign: 'right',
+              floating: true,
+              offsetY: -25,
+              offsetX: -5
+            }
+            };
+    
+            var chart = new ApexCharts(document.querySelector("#chart"), options);
+            chart.render();
+    
+        </script>
 </body>
-
 </html>

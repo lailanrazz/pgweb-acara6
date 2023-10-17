@@ -35,12 +35,21 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="pendudukjeniskelamin.html">Penduduk Menurut Jenis
-                                    Kelamin</a></li>
+                            <li><a class="dropdown-item" href="pendudukjeniskelamin.html">Penduduk Menurut Jenis Kelamin</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="jenissaranaperdagangan.html">Jenis Saran Perdagangan</a></li>
+                            <li><a class="dropdown-item" href="jenissaranaperdagangan.html">Jenis Sarana Perdagangan</a></li>
+                                <hr class="dropdown-divider">
+                            <li><a class="dropdown-item" href="fasilitaskesehatan.html">Jumlah Fasilitas Kesehatan</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="jumlahpenganutagama.html">Jumlah Penganut Agama</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                        </li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -72,9 +81,9 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p> Nama : Laila </p>
+                    <p> Nama : Laila Nur Azizah </p>
                     <p> NIM : 500377 </p>
-                    <p> Kelas : B </p>
+                    <p> Kelas : PGWEB B </p>
                     <p> Sumber Data : <a href="https://patikab.bps.go.id/"
                             target="_blank">https://patikab.bps.go.id/</a>
                     </p>
@@ -87,91 +96,51 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.42.0/apexcharts.min.js"
-        integrity="sha512-HctQcT5hnI/elQck4950pvd50RuDnjCSGSoHI8CNyQIYVxsUoyJ+gSQIOrll4oM/Z7Kfi7WCLMIbJbiwYHFCpA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        var options = {
-            series: [{
-                name: 'Jumlah Laki-Laki',
-                data: [
-                    46577.00, 40343.00, 28359.00, 32171.00, 24427.00, 22977.00, 22615.00, 48211.00, 23821.00, 54662.00, 31619.00, 31380.00, 24219.00, 27866.00, 32286.00, 31950.00, 37827.00, 19293.00, 24124.00, 35372.00, 31126.00
-                ]
-                
-            },
-            {
-                name: 'Jumlah Perempuan',
-                data: [
-                46579.00, 40301.00, 28742.00, 32971.00, 24431.00, 23873.00, 22781.00, 48537.00, 24884.00, 56365.00, 32130.00, 32031.00, 24134.00, 27688.00, 32489.00, 32232.00, 37445.00, 19410.00, 24186.00, 35703.00, 31035.00
-]
-                
-            }], 
-            chart: {
-                type: 'bar',
-                height: 350
-            },
-            plotOptions: {
-                bar: {
-                    horizontal: false,
-                    columnWidth: '55%',
-                    endingShape: 'rounded',
-                    dataLabels: {
-                        position: 'top',
-                    },
-                },
-            },
-            dataLabels: {
-                enabled: false
-            },
-            stroke: {
-                show: true,
-                width: 2,
-                colors: ['transparent']
-            },
-            xaxis: {
-                categories: ['Sukolilo', 'Kayen', 'Tambakromo', 'Winong', 'Pucakwangi',
-                    'Jaken', 'Batangan', 'Juwana', 'Jakenan', 'Pati', 'Gabus', 'Margorejo', 'Gembong',
-                    'Tlogowungu', 'Wedarijaksa', 'Trangkil', 'Margoyoso', 'Gunungwungkal', 'Cluwak', 'Tayu',
-                    'Dukuhseti'],
-                title: {
-                    text: 'Kecamatan'
-                }
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.42.0/apexcharts.min.js"
+    integrity="sha512-HctQcT5hnI/elQck4950pvd50RuDnjCSGSoHI8CNyQIYVxsUoyJ+gSQIOrll4oM/Z7Kfi7WCLMIbJbiwYHFCpA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-            },
-            yaxis: {
-                title: {
-                    text: 'Jiwa'
+<script>
+    var options = {
+      series: [{
+      name: 'Jumlah Penduduk Miskin',
+      type: 'column',
+      data: [206490, 205990, 202310, 203120, 191950, 184410, 179320, 180670, 182610, 194120, 181650]
+    }, {
+      name: 'Persentase Kemiskinan',
+      type: 'area',
+      data: [13.59, 13.36, 12.93, 12.85, 12.04, 11.40, 10.95, 10.90, 10.89, 11.34, 10.48]
+    }],
+      chart: {
+      height: 350,
+      type: 'area'
+    },
+    stroke: {
+      width: [0.5, 5],
+    },
+    dataLabels: {
+      enabled: true,
+      enabledOnSeries: [1],
+    },
+    labels: [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022],
+    yaxis: [{
+      title: {
+        text: 'Jiwa',
+      },
+    
+    }, {
+      opposite: true,
+      title: {
+        text: 'Persentase (%)'
+      }
+    }]
+    };
 
-                }
-            },
-            fill: {
-                opacity: 1
-            },
-            tooltip: {
-                y: {
-                    formatter: function (val) {
-                        return "" + val + " jiwa "
-                    }
-                }
-            },
-            dataLabels: {
-                enabled: true,
-                formatter: function (val) {
-                    return val + "";
-                },
-                offsetY: -20,
-                style: {
-                    fontSize: '12px',
-                    colors: ["#304758"]
-                }
-            },
-        };
-
-        var chart = new ApexCharts(document.querySelector("#chart"), options);
-        chart.render();
-    </script>
+    var chart = new ApexCharts(document.querySelector("#chart"), options);
+    chart.render();
+</script>
 </body>
 
 </html>

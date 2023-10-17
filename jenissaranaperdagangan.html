@@ -25,24 +25,33 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false"><i class="fa-solid fa-server"></i> Data
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="index.html">Jumlah Penduduk</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false"><i class="fa-solid fa-server"></i> Data
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="index.html">Jumlah Penduduk</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="pendudukjeniskelamin.html">Penduduk Menurut Jenis Kelamin</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="jenissaranaperdagangan.html">Jenis Sarana Perdagangan</a></li>
+                                        <hr class="dropdown-divider">
+                                    <li><a class="dropdown-item" href="fasilitaskesehatan.html">Jumlah Fasilitas Kesehatan</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="jumlahpenganutagama.html">Jumlah Penganut Agama</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                </li>
+                                </ul>
                             </li>
-                            <li><a class="dropdown-item" href="pendudukjeniskelamin.html">Penduduk Menurut Jenis
-                                    Kelamin</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="jenissaranaperdagangan.html">Jenis Sarana Perdagangan</a></li>
-                        </ul>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-disabled="true" data-bs-toggle="modal" data-bs-target="#infoModal"><i
                                 class="fa-solid fa-circle-info"></i> Info</a>
@@ -72,9 +81,9 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p> Nama : Laila </p>
+                    <p> Nama : Laila Nur Azizah</p>
                     <p> NIM : 500377 </p>
-                    <p> Kelas : B </p>
+                    <p> Kelas : PGWEB B </p>
                     <p> Sumber Data : <a href="https://patikab.bps.go.id/"
                             target="_blank">https://patikab.bps.go.id/</a>
                     </p>
@@ -92,15 +101,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.42.0/apexcharts.min.js"
         integrity="sha512-HctQcT5hnI/elQck4950pvd50RuDnjCSGSoHI8CNyQIYVxsUoyJ+gSQIOrll4oM/Z7Kfi7WCLMIbJbiwYHFCpA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
     <script>
         var options = {
-            series: [6, 0, 20, 3, 1, 2, 65
-            ],
+            series: [6, 0, 20, 3, 1, 2, 65],
             chart: {
                 type: 'donut',
+                width: 500
             },
-            labels: ['Pasar Grosir Tradisional', 'Pasar Grosir modern', 'Pasar Daerah', 'Pasar hewan', 'Pasar burung', 'Pasar jajanan Khas Pati', 'Pasar Desa'
-            ],
+            labels: ['Pasar Grosir Tradisional', 'Pasar Grosir modern', 'Pasar Daerah', 'Pasar hewan', 'Pasar burung', 'Pasar jajanan Khas Pati', 'Pasar Desa'],
             responsive: [{
                 breakpoint: 480,
                 options: {
